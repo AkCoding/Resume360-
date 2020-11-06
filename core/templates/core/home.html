@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<div class="mt-5">
+    <div class="text-center">
+        <img src="{% static 'core/images/pic.jpg' %}" alt="Profile Picture"
+        class="img-thumbnail" width="150px" height="50px">
+    </div>
+        <div class="mt-5 text-white mx-5 text-justify">
+    <h1 class="font-weight-bold st-font">HELLO,</h1>
+    <div class="px-4" style="line-height:2rem;">
+    <p style="text-indent:100px;">
+        I am <b class="text-warning"> Rozer David</b> having 5 year
+        of full-stack web development experience for global businesses,
+        I offre the technical experience you are seeking for your web developer position.
+    </p>
+
+        <p>
+            Since earning my bechlor's degree in internet and web development from XYZ
+            University, I have served as a web developer at <b class="text-warning">
+            GS Technology</b>, one of biggest premier digital  marketing and
+            web development form. In this position, I have led web development projects
+            for client in diverse industries including technology, manufacturing,
+            pharmaceutical, hospitality, retail and financial services
+        </p>
+    </div>
+</div>
+    <div class="text-center">
+        <a href="{% url 'contact' %}" class="btn btn-outline-warning my-3 mr-5"> Hire Me</a>
+    <a href='{% url "contact" %}' class="btn btn-outline-info my-3">Contact</a>
+    </div>
+</div>
+{% endblock content %}

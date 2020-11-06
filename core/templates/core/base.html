@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/all.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/bootstrap.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    {% block corecss %}
+        <link rel="stylesheet" type="text/css" href="{% static 'core/css/core.css' %}">
+    {% endblock corecss %}
+
+</head>
+<body>
+<div class="container-fluid bg-dark">
+	<div class="raw">
+		<div class="text-center">
+        {% include 'core/sidebar.html' %}
+        </div>
+	<div class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+        {% block content %}{% endblock content %}
+    </div>
+</div>
+</div>
+
+<script src="{% static 'core/js/jquery.js' %}" type="text/javascript"></script>
+<script src="{% static 'core/js/proper.js' %}" type="text/javascript"></script>
+<script src="{% static 'core/js/all.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'core/js/bootstrap.js' %}" type="text/javascript"></script>
+<script src="https://kit.fontawesome.com/9fc7000714.js"></script>
+</body>
+</html>
