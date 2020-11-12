@@ -4,14 +4,14 @@
 <div class="mt-5">
     <h1 class="text-warning mb-5 border-bottom">HOME</h1>
     <div class="text-center">
-        <img src="{% static 'core/images/pic.jpg' %}" alt="Profile Picture"
+        <img src="{{ user.profile.image.url }}" alt="Profile Picture"
         class="img-thumbnail" width="150px" height="50px">
     </div>
         <div class="mt-5 text-white mx-5 text-justify">
     <h1 class="font-weight-bold st-font">HELLO,</h1>
     <div class="px-4" style="line-height:2rem;">
     <p style="text-indent:100px;">
-        I am <b class="text-warning">Arbaaz Khan</b> having 5 year
+        I am <b class="text-warning">{{ user.username }}</b> having 5 year
         of full-stack web development experience for global businesses,
         I offre the technical experience you are seeking for your web developer position.
     </p>
