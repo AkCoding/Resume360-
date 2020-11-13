@@ -1,31 +1,99 @@
+
 {% load static %}
 {% block content %}
-<div class="col-sm-10">
-<h3 class="text-white my-5">LOG IN PAGE</h3>
-   <form action="" method="post">
-        {% csrf_token %}
-       <input type="text" name="username" placeholder="username"><br>
-       <input type="password" name="password" placeholder="password"><br>
-       <input type="Submit">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
+<link rel="stylesheet" href="https://cdn.lineicons.com/1.0.0/LineIcons.min.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+<div class="container-fluid bg-dark">
+	<div class="container">
+	    <div class="row">
+		<div class="col-md-8 ">
+		    <div class="row">
+		        <div class="col-sm-3 col-md-2 col-lg-2">
+		            <i class="lni lni-enter" aria-hidden="true"></i>
+		        </div>
 
+		        <div class="col-sm-9 col-md-10 col-lg-10">
+		            <h1 class="text-warning heading">Register</h1>
+		            <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		        </div>
+		    </div>
 
-<!--        {% for fm in form %}-->
-<!--        <div class="form-group">-->
-<!--            {{fm.label_tag}} {{fm}} {{fm.error|striptags}}-->
-<!--        </div>-->
-<!--        {% endfor %}-->
-<!--        <input type="submit" value="Login" class="btn btn-primary">-->
-<!--        {% if form.non_field_errors %}-->
-<!--        {% for error in form.non_field_errors %}-->
-<!--        <p>{{error}}</p>-->
-<!--        {% endfor %}-->
-<!--        {% endif %}-->
-    </form>
-<div>
-    {% for message in messages %}
-    <h3> {{message}} </h3>
-    {% endfor %}
+		     <div class="row">
+		        <div class="col-sm-3 col-md-2 col-lg-2">
+		            <i class="lni lni-user" aria-hidden="true"></i>
+		        </div>
+
+		        <div class="col-sm-9 col-md-10 col-lg-10">
+		            <h1 class="text-warning heading">Make Your Profile</h1>
+		            <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		        </div>
+		    </div>
+
+		      <div class="row">
+		        <div class="col-sm-3 col-md-2 col-lg-2">
+		            <i class="lni lni-cloud-upload" aria-hidden="true"></i>
+		        </div>
+
+		        <div class="col-sm-9 col-md-10 col-lg-10">
+		            <h1 class="text-warning heading">Upload Resume</h1>
+		            <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		        </div>
+		    </div>
+
+		    <div class="row">
+		        <div class="col-sm-3 col-md-2 col-lg-2">
+		            <i class="lni lni-search" aria-hidden="true"></i>
+		        </div>
+
+		        <div class="col-sm-9 col-md-10 col-lg-10">
+		            <h1 class="text-warning heading">Search Jobs</h1>
+		            <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		        </div>
+		    </div>
+		</div>
+
+		<div class="col-md-4 mt-5">
+		        <div class="card regform wow bounce animated" data-wow-delay="0.05s">
+		            <div class="card-body regform">
+		               <div class=" myform form ">
+                        <div class="logo mb-3">
+                           <div class="col-md-12 text-center">
+                              <h1 class="sign">Login</h1>
+                           </div>
+                        </div>
+                           <form action="" method="post" name="login">
+                               {% csrf_token %}
+                           <div class="form-group">
+                              <label for="exampleInputEmail1">Email address</label>
+                              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleInputEmail1">Password</label>
+                              <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
+                           </div>
+                           <div class="form-group">
+                              <p class="text-center">By signing up you accept our <a href="#">Terms Of Use</a></p>
+                           </div>
+                           <div class="col-md-12 text-center ">
+                              <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
+                           </div>
+                           <div class="col-md-12 mb-3">
+                           </div>
+                           <div class="form-group">
+                              <p class="text-center">Don't have account? <a href="{% url 'signup' %}" id="signup">Sign up here</a></p>
+                           </div>
+                        </form>
+                       </div>
+		        </div>
+		    </div>
+	</div>
+	</div>
 </div>
 </div>
-{% endblock content %}
+	{% endblock %}
