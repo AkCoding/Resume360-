@@ -1,9 +1,9 @@
 from django.shortcuts import render, HttpResponseRedirect
-from requests import auth
 from .forms import SignUpForm, LoginForm
 from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import render, redirect
+
 
 
 def user_signup(request):
@@ -16,6 +16,8 @@ def user_signup(request):
         form = SignUpForm()
     return render(request, 'core/sign_up.html', {'form': form})
 
+
+
 def user_login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -27,6 +29,7 @@ def user_login(request):
             return redirect('home')
     else:
         return render(request, 'core/login.html')
+
 
 def home(request):
     context = {'home' : 'active'}
@@ -43,7 +46,8 @@ def contact(request):
     else:
         return HttpResponseRedirect('/login/')
 
-def user_logout(request):
+
+def user_logout(request): 
     logout(request)
     return render(request, 'core/home.html')
 

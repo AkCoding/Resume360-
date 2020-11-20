@@ -7,3 +7,8 @@ class PostModelAdmin(admin.ModelAdmin):
     list_display = ['id', 'first_Name', 'last_name']
 
 admin.site.register(Profile)
+
+
+
+
+
